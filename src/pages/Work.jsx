@@ -11,6 +11,7 @@ const WEBSITE_PROJECTS = [
     year: '2026',
     text: 'A premium animated marketing site for an automation agency — violet/cyan palette, GSAP scroll choreography, and a signature falling-particle animation reskinned for tech.',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    live: 'https://autoflow-automation-seven.vercel.app',
   },
   {
     title: 'Liora Boutique',
@@ -19,6 +20,7 @@ const WEBSITE_PROJECTS = [
     year: '2026',
     text: "A warm, editorial lookbook site for a fashion boutique — product-forward hero, no cart or checkout by design, ships straight to any static host with zero build step.",
     image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1200&q=80',
+    live: 'https://liora-boutique.vercel.app',
   },
   {
     title: 'Ember & Vine',
