@@ -27,6 +27,7 @@ const WEBSITE_PROJECTS = [
     year: '2026',
     text: "A hybrid restaurant-and-recipe-journal site — terracotta/sage palette, a filterable chef's-recipe grid with a full ingredients-and-method modal, a live 'From the Pass' kitchen-status animation, and a validating reservation form.",
     image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1200&q=80',
+    live: 'https://ember-vine-inky.vercel.app',
   },
   {
     title: 'VOLTA Supply Co.',
@@ -35,6 +36,7 @@ const WEBSITE_PROJECTS = [
     year: '2026',
     text: "A bold streetwear e-commerce store with a real working cart — category filters, size-select quick-view, a live drop-countdown and stock-scarcity ticker, and a persistent cart drawer (saved to localStorage) that carries through to a full checkout flow. Not a static lookbook.",
     image: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1200&q=80',
+    live: 'https://volta-supply.vercel.app',
   },
 ]
 
@@ -45,7 +47,7 @@ const AUTOMATION_PROJECTS = [
     stack: 'n8n · JavaScript',
     year: '2026',
     text: 'Inbox to ledger with zero re-typing: an n8n workflow watches an accounts-payable inbox, extracts invoice data, validates totals, and routes to auto-log-and-notify or flag-for-review. Paired with a live interactive demo of the pipeline.',
-    href: '/automations/invoice-processing/demo.html',
+    href: 'https://invoice-processing-tau.vercel.app',
     stages: ['Trigger', 'Extract', 'Validate', 'Sync'],
   },
 ]
@@ -131,7 +133,19 @@ function ProjectCard({ project }) {
         <span className="font-mono text-xs text-[#8C8779] whitespace-nowrap pt-1">{project.year}</span>
       </div>
       <p className="text-[#6B675E] text-[15px] leading-relaxed mt-3">{project.text}</p>
-      <p className="font-mono text-[10px] uppercase tracking-widest text-[#8C8779] mt-3">{project.stack}</p>
+      <div className="flex items-center justify-between mt-3">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-[#8C8779]">{project.stack}</p>
+        {project.live && (
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-primary-dark group-hover:gap-1.5 transition-all"
+          >
+            View live site <ArrowUpRight className="h-3.5 w-3.5" />
+          </a>
+        )}
+      </div>
     </article>
   )
 }
